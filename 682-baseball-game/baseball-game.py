@@ -1,3 +1,4 @@
+#Time complexity is O(n). Space complexity is O(1).
 class Solution:
     def is_number(self, value):
         return isinstance(value, (int, float))
