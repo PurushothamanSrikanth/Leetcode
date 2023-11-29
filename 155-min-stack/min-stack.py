@@ -1,3 +1,5 @@
+#O(n) time complexity for getMin() function
+
 class MinStack:
 
     def __init__(self):
