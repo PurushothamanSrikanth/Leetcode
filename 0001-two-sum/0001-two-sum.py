@@ -1,3 +1,5 @@
+#Comparison method: Time complexity is O(n). Space complexity is O(n).
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         l, r = 0, len(nums)-1
