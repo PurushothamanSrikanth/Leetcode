@@ -1,0 +1,28 @@
+ListNode Class:
+class ListNode: Defines a class representing a node in a singly-linked list. Each node has a value (val) and a reference to the next node (next). The init method initializes the node with a given value and an optional reference to the next node.
+
+Solution Class and mergeTwoLists Method:
+class Solution: Defines a class that may contain methods to solve problems related to linked lists.
+def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:: This method takes two sorted linked lists, list1 and list2, as inputs. It returns an optional ListNode, representing the head of the merged sorted linked list.
+
+Merging Logic:
+dummy = ListNode(): Creates a dummy node to simplify the handling of the merged list. The dummy node is not part of the final result and is used as a placeholder.
+tail = dummy: Initializes a pointer tail to the dummy node, initially pointing to the head of the merged list.
+The while loop iterates as long as both list1 and list2 are not empty:
+Compares the values of the current nodes in list1 and list2.
+Appends the smaller node to the merged list, updating the tail pointer.
+
+Advances the pointer of the chosen list (list1 or list2).
+After the loop, if either list1 or list2 is not empty, appends the remaining nodes to the merged list.
+Returns the head of the merged list, which is the next node after the dummy node.
+This implementation efficiently merges two sorted linked lists into a new sorted linked list by iteratively selecting the smaller node at each step. The dummy node and the tail pointer help simplify the merging logic and avoid edge cases.
+
+Time Complexity:
+The time complexity of the mergeTwoLists method is O(m + n), where m and n are the lengths of list1 and list2, respectively. This is because the method iterates through both lists once, and the number of iterations is proportional to the total number of nodes in both lists.
+
+Space Complexity:
+The space complexity is O(1), constant space. This is because the algorithm uses a constant amount of extra space regardless of the input size. The primary variables that contribute to space complexity are dummy and tail, both of which are pointers and do not depend on the size of the input lists. The merging is done in-place, and the method does not use additional data structures that scale with the size of the input.
+
+In summary:
+Time Complexity: O(m + n)
+Space Complexity: O(1)
